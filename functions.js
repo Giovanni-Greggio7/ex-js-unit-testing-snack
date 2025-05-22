@@ -7,14 +7,19 @@ const getInitials = name => {
 }
 
 const createSlug = stringa => {
+
+    if (!stringa) {
+        throw new Error('La stringa deve essere compilata e deve essere scritta in lettere')
+    }
     const minuscolo = stringa.toLowerCase().split(' ').join('-')
     return minuscolo
+
 }
 
 const average = array => {
 
     array.forEach(element => {
-        if(isNaN(element)){
+        if (isNaN(element)) {
             throw new Error('Average accetta solo numeri!')
         }
     });
@@ -26,14 +31,14 @@ const average = array => {
     const media = somma / array.length
 
     return media
-    
+
 }
 
 const isPalindrome = word => {
-    
+
     const controllo = word.toLowerCase().split('').reverse().join('')
     return controllo === word.toLowerCase()
-    
+
 }
 
 module.exports = {
