@@ -1,7 +1,7 @@
 const getInitials = name => {
 
     const splitName = name.split(' ').filter(str => str != '')
-    const initials =  `${splitName[0].charAt(0).toUpperCase()}.${splitName[1].charAt(0).toUpperCase()}.`
+    const initials = `${splitName[0].charAt(0).toUpperCase()}.${splitName[1].charAt(0).toUpperCase()}.`
     return initials
 
 }
@@ -29,8 +29,16 @@ const average = array => {
     
 }
 
+const isPalindrome = word => {
+    
+    const controllo = word.toLowerCase().split('').reverse().join('')
+    return controllo === word.toLowerCase()
+    
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
+    isPalindrome,
 } 
