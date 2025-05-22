@@ -7,7 +7,7 @@ const getInitials = name => {
 }
 
 const createSlug = stringa => {
-    const minuscolo = stringa.toLowerCase()
+    const minuscolo = stringa.toLowerCase().split(' ').join('-')
     return minuscolo
 }
 
@@ -18,8 +18,6 @@ const average = array => {
             throw new Error('Average accetta solo numeri!')
         }
     });
-
-    
 
     const somma = array.reduce((acc, curr) => {
         return acc + curr
