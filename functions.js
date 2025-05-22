@@ -6,6 +6,12 @@ const getInitials = name => {
 
 }
 
+const createSlug = stringa => {
+    const minuscolo = stringa.toLowerCase()
+    return minuscolo
+}
+
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 } 
