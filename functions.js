@@ -11,7 +11,20 @@ const createSlug = stringa => {
     return minuscolo
 }
 
+const average = array => {
+
+    const somma = array.reduce((acc, curr) => {
+        return acc + curr
+    }, 0)
+
+    const media = somma / array.length
+
+    return media
+    
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average,
 } 
