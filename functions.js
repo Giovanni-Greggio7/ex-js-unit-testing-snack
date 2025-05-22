@@ -41,9 +41,15 @@ const isPalindrome = word => {
 
 }
 
+const findPostById = (array, id) => {
+    const findPost = array.find(p => p.id === id)
+    return findPost
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     isPalindrome,
+    findPostById
 } 
