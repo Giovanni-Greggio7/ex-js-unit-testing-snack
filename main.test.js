@@ -17,4 +17,12 @@ test("La funzione createSlug restituisce una stringa in lowercase.", () => {
 test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
     const arrayNumeri = [3, 6, 9, 12, 15]
     expect(average(arrayNumeri)).toBe(9)
+    expect(() => average([3, 4, 'ciao'])).toThrow()
 })
+
+// //SNACK 4
+// test("La funzione createSlug sostituisce gli spazi con -.", () => {
+//     expect(createSlug('Tutto bene?')).toBe('Tutto-bene?')
+// })
+
+

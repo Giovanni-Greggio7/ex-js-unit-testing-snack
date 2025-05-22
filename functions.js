@@ -13,6 +13,14 @@ const createSlug = stringa => {
 
 const average = array => {
 
+    array.forEach(element => {
+        if(isNaN(element)){
+            throw new Error('Average accetta solo numeri!')
+        }
+    });
+
+    
+
     const somma = array.reduce((acc, curr) => {
         return acc + curr
     }, 0)
